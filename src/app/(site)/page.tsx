@@ -1,5 +1,6 @@
 export const dynamic = "force-dynamic";
 
+import Image from "next/image";
 import Link from "next/link";
 import { UserCheck, Clock, Globe, GraduationCap, Star, CheckCircle2 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
@@ -58,6 +59,20 @@ export default async function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Hero image */}
+      <section className="bg-[#EAF2FB]">
+        <div className="mx-auto max-w-5xl px-4">
+          <Image
+            src="/video-english-hero-clean.svg"
+            alt="원어민 강사와 1:1 화상영어 수업 장면"
+            width={1200}
+            height={700}
+            className="w-full h-auto"
+            priority
+          />
         </div>
       </section>
 
