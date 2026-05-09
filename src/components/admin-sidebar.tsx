@@ -11,10 +11,8 @@ import {
   Bell,
   MessageCircle,
   ChevronRight,
-  LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { logoutAction } from "@/app/admin/login/actions";
 
 const navItems = [
   {
@@ -119,7 +117,7 @@ export function AdminSidebar() {
           );
         })}
       </nav>
-      <div className="border-t p-4 space-y-2">
+      <div className="border-t p-4">
         <Link
           href="/"
           className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
@@ -127,15 +125,6 @@ export function AdminSidebar() {
           <ChevronRight className="size-3 rotate-180" />
           사이트로 돌아가기
         </Link>
-        <form action={logoutAction}>
-          <button
-            type="submit"
-            className="flex items-center gap-2 text-xs text-muted-foreground hover:text-destructive transition-colors w-full"
-          >
-            <LogOut className="size-3" />
-            로그아웃
-          </button>
-        </form>
       </div>
     </aside>
   );
