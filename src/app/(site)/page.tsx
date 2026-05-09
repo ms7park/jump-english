@@ -3,6 +3,7 @@ export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { UserCheck, Clock, Globe, GraduationCap, Star, CheckCircle2 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -42,10 +43,10 @@ export default async function Home() {
             레벨 테스트부터 강사 매칭까지, 모든 게 무료입니다.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Link href="/support/consult" className={buttonVariants({ size: "lg", className: "bg-white text-blue-700 hover:bg-blue-50" })}>
+            <Link href="/support/consult" className={cn(buttonVariants({ size: "lg" }), "bg-white text-blue-700 hover:bg-blue-50")}>
               무료 레벨 테스트 신청
             </Link>
-            <Link href="/about" className={buttonVariants({ size: "lg", variant: "outline", className: "border-white/60 text-white hover:bg-white/10" })}>
+            <Link href="/about" className={cn(buttonVariants({ size: "lg", variant: "outline" }), "border-white/60 bg-transparent text-white hover:bg-white/10")}>
               서비스 소개 →
             </Link>
           </div>
@@ -209,7 +210,7 @@ export default async function Home() {
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 px-4 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">오늘 바로 시작하세요</h2>
           <p className="text-lg text-blue-100">무료 레벨 테스트로 내 수준을 확인하고,<br />딱 맞는 강사와 첫 수업을 경험해 보세요.</p>
-          <Link href="/support/consult" className={buttonVariants({ size: "lg", className: "bg-white text-blue-700 hover:bg-blue-50" })}>
+          <Link href="/support/consult" className={cn(buttonVariants({ size: "lg" }), "bg-white text-blue-700 hover:bg-blue-50")}>
             무료 레벨 테스트 신청하기
           </Link>
         </div>
