@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  name: "Next.js Starter Kit",
+  name: "Jump English",
   description:
-    "A modern starter kit built with Next.js 16, React 19, Tailwind CSS v4, and shadcn/ui.",
-  url: "https://example.com",
+    "1:1 맞춤 화상영어로 자신감 있게 말하세요. 원어민 강사와 함께하는 Jump English에서 진짜 영어를 경험하세요.",
+  url: "https://jump-english.co.kr",
 };
 
 export function createMetadata({
